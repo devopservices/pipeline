@@ -122,7 +122,8 @@ const (
 	LoggingOperatorImageTag     = "loggingOperator.imageTag"
 
 	// Spotguides constants
-	SpotguideAllowPrereleases = "spotguide.allowPrereleases"
+	SpotguideAllowPrereleases  = "spotguide.allowPrereleases"
+	SpotguideAllowPrivateRepos = "spotguide.allowPrivateRepos"
 )
 
 //Init initializes the configurations
@@ -230,6 +231,7 @@ func init() {
 	viper.SetDefault(EksASGFulfillmentTimeout, "10m")
 
 	viper.SetDefault(SpotguideAllowPrereleases, false)
+	viper.SetDefault(SpotguideAllowPrivateRepos, false)
 
 	viper.SetDefault("issue.type", "github")
 	viper.SetDefault("issue.githubLabels", []string{"community"})
